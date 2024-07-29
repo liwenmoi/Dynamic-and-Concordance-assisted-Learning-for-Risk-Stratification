@@ -7,7 +7,7 @@ Executable codes of the manuscript:
 The following files are included:
 
 1. main.R
-	This R file contains the example code. It gives an example of applying the proposed method to a cohort of subjects with longitudinally measured markers. 
+	This R file contains the example code and results. It gives an example of applying the proposed method to a cohort of subjects with longitudinally measured markers. Readers should be able to reproduce the results by executing the code here.
 
 2. data.csv
 	A similated longitudinal dataset that includes the following variables:
