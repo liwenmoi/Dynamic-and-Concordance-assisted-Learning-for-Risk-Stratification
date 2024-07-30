@@ -29,28 +29,40 @@ s = 0
 score <- get.score(data=data, fit=fit_ker_xtbt, s=s, df=df.fracpoly)
 
 # Obtain AUC and RMST
-res_roc <- get.ROC.AUC_realdata(data=data,
+(res_roc <- get.ROC.AUC_realdata(data=data,
                                 fit=fit_ker_xtbt,
                                 s=s,w=1.2,
                                 logscale=1,offset=1
-                                )
+                                ))
 
-tau.rmst <- quantile(data[unique(data$id),"Y"], 0.95)
-res_d <- get.D.s_realdata(data=data, fit=fit_ker_xtbt, s=s, logscale=1, 
-                          offset=1, tau.rmst=tau.rmst)
+# $ker_xtbt
+# auc 
+# 0.8234127 
+(tau.rmst <- quantile(data[unique(data$id),"Y"], 0.95))
+# 95% 
+# 4.139 
+(res_d <- get.D.s_realdata(data=data, fit=fit_ker_xtbt, s=s, logscale=1, 
+                          offset=1, tau.rmst=tau.rmst))
 
-
+# $ker_xtbt
+# d 
+# 0.9331325 
 ######## At landmark time s = 0.6
 s = 0.6
 score <- get.score(data=data, fit=fit_ker_xtbt, s=s, df=df.fracpoly)
 
-# Obtain AUC and RMST
-res_roc <- get.ROC.AUC_realdata(data=data,
+### Obtain AUC and RMST
+(res_roc <- get.ROC.AUC_realdata(data=data,
                                 fit=fit_ker_xtbt,
                                 s=s,w=1.2,
                                 logscale=1,offset=1
-)
+))
+# $ker_xtbt
+# auc 
+# 0.818621 
 
-
-res_d <- get.D.s_realdata(data=data, fit=fit_ker_xtbt, s=s, logscale=1, 
-                          offset=1, tau.rmst=tau.rmst)
+(res_d <- get.D.s_realdata(data=data, fit=fit_ker_xtbt, s=s, logscale=1, 
+                          offset=1, tau.rmst=tau.rmst))
+# $ker_xtbt
+# d 
+# 1.150181 
